@@ -1,0 +1,12 @@
+docker build -f Dockerfile.dev .
+❯ docker run -p 3000:3000 -v $(pwd):/app 562c98622439
+# Colon refers to mapping
+❯ docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 562c98622439
+docker run -it 562c98622439 npm run test
+# Use docker compose to up a container and then using its id
+# to run
+docker exec -it 85cab6d19e58 npm run test
+docker attach /*web_one id*/ e0c9eb948d05
+docker exec -it e0c9eb948d05 sh 
+❯ docker run -p 8080:80 a9de19e37bda
+# 80 is the default port for nginx
