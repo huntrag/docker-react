@@ -10,3 +10,4 @@ docker attach /*web_one id*/ e0c9eb948d05
 docker exec -it e0c9eb948d05 sh 
 ❯ docker run -p 8080:80 a9de19e37bda
 # 80 is the default port for nginx
+>docker run 562c98622439 npm run test -- --coverage
